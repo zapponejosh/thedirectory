@@ -6,8 +6,14 @@ function TableBody({ users }) {
     <tbody>
       {users.map((user) => (
         <tr key={user.id.value}>
-          <td>{user.name.first}</td>
-          <td>{user.name.last}</td>
+          <td>
+            <img
+              className="user-img"
+              src={user.picture.medium}
+              alt="user-thumnail"
+            />
+          </td>
+          <td>{`${user.name.first} ${user.name.last}`}</td>
           <td>{user.email}</td>
         </tr>
       ))}
