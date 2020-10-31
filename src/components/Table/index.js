@@ -4,10 +4,10 @@ import "./style.css";
 import TableTop from "../TableTop";
 import TableBody from "../TableBody";
 
-function Table({ users, handleSort, sortOrder }) {
+function Table({ users, requestSort }) {
   return (
     <table className="table">
-      <TableTop handleSort={handleSort} sortOrder={sortOrder} />
+      <TableTop requestSort={requestSort} />
       <TableBody users={users} />
     </table>
   );

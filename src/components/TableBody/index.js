@@ -5,15 +5,12 @@ function TableBody({ users }) {
   return (
     <tbody>
       {users.map((user) => (
-        <tr key={user.id.value}>
+        <tr key={user.id}>
           <td>
-            <img
-              className="user-img"
-              src={user.picture.medium}
-              alt="user-thumnail"
-            />
+            <img className="user-img" src={user.image} alt="user-thumnail" />
           </td>
-          <td>{`${user.name.first} ${user.name.last}`}</td>
+          <td>{user.first}</td>
+          <td>{user.last}</td>
           <td>{user.email}</td>
         </tr>
       ))}

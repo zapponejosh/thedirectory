@@ -1,19 +1,16 @@
 import React from "react";
 import "./style.css";
 
-function TableTop({ handleSort, sortOrder }) {
-  let orderBtn;
-  if (sortOrder === "ascending") {
-    orderBtn = <span>A-Z</span>;
-  } else {
-    orderBtn = <span>Z-A</span>;
-  }
+function TableTop({ requestSort }) {
   return (
-    <tr>
-      <th>Image</th>
-      <th onClick={handleSort}>Name {orderBtn}</th>
-      <th>Email</th>
-    </tr>
+    <thead>
+      <tr>
+        <th>Image</th>
+        <th onClick={() => requestSort("first")}>First Name</th>
+        <th onClick={() => requestSort("last")}>Last Name</th>
+        <th>Email</th>
+      </tr>
+    </thead>
   );
 }
 
