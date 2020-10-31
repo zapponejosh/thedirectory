@@ -3,9 +3,11 @@ import API from "../utils/API";
 import Filter from "../components/Filter";
 import Table from "../components/Table";
 import useSort from "../utils/useSort";
+import useFilter from "../utils/useFilter";
 
 function Directory() {
   const [users, setUsers] = useState([]);
+  const [filter, setFilter] = useState("");
 
   // When the component mounts, a call will be made to get random users.
   useEffect(() => {
@@ -33,12 +35,18 @@ function Directory() {
       .catch((err) => console.log(err));
   }
 
-  const { sortedUsers, requestSort } = useSort(users);
+  const filteredUsers = useFilter(users, filter);
+
+  const { sortedUsers, requestSort } = useSort(filteredUsers);
+
+  const handleInputChange = (event) => {
+    setFilter(event.target.value);
+  };
 
   return (
     <div>
       <h1 className="text-center">It&apos;s an app!</h1>
-      <Filter />
+      <Filter handleInputChange={handleInputChange} filter={filter} />
       <Table users={sortedUsers} requestSort={requestSort} />
     </div>
   );
