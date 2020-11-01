@@ -22,3 +22,9 @@ td {
   border: solid 1px;
   text-align: center;
 }
+
+@media only screen and (max-device-width: 900px) and (-webkit-min-device-pixel-ratio: 2) {
+  .table-container {
+    padding: 20px 20px;
+  }
+}
