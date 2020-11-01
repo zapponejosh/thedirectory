@@ -5,9 +5,10 @@ import "./style.css";
 function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
-      <a className="navbar-brand" href="/">
+      <p className="navbar-brand site-name">
+        <img className="logo" src="/logo-1.png" alt="logo" />
         theDirectory
-      </a>
+      </p>
     </nav>
   );
 }

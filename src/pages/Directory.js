@@ -45,7 +45,7 @@ function Directory() {
 
   return (
     <div>
-      <h1 className="text-center">It&apos;s an app!</h1>
+      <h1 className="text-center">Welcome to theDirectory!</h1>
       <Filter handleInputChange={handleInputChange} filter={filter} />
       <Table users={sortedUsers} requestSort={requestSort} />
     </div>
