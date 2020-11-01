@@ -37,7 +37,7 @@ function Directory() {
 
   const filteredUsers = useFilter(users, filter);
 
-  const { sortedUsers, requestSort } = useSort(filteredUsers);
+  const { sortedUsers, requestSort, sortConfig } = useSort(filteredUsers);
 
   const handleInputChange = (event) => {
     setFilter(event.target.value);
@@ -47,7 +47,11 @@ function Directory() {
     <div>
       <h1 className="text-center">Welcome to theDirectory!</h1>
       <Filter handleInputChange={handleInputChange} filter={filter} />
-      <Table users={sortedUsers} requestSort={requestSort} />
+      <Table
+        users={sortedUsers}
+        requestSort={requestSort}
+        sortConfig={sortConfig}
+      />
     </div>
   );
 }

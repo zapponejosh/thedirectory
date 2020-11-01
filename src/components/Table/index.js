@@ -4,12 +4,14 @@ import "./style.css";
 import TableTop from "../TableTop";
 import TableBody from "../TableBody";
 
-function Table({ users, requestSort }) {
+function Table({ users, requestSort, sortConfig }) {
   return (
-    <table className="table">
-      <TableTop requestSort={requestSort} />
-      <TableBody users={users} />
-    </table>
+    <div className="table-container">
+      <table>
+        <TableTop requestSort={requestSort} sortConfig={sortConfig} />
+        <TableBody users={users} />
+      </table>
+    </div>
   );
 }
 

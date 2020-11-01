@@ -1,0 +1,13 @@
+th {
+  border: 1px solid black;
+  background-color: gray;
+}
+
+.sort-col {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.sort-col:hover {
+  background-color: rgb(218, 156, 127);
+}

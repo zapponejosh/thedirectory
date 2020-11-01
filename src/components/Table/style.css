@@ -1,0 +1,24 @@
+.table-container {
+  padding: 20px 200px;
+}
+
+table {
+  text-align: center;
+  width: 100%;
+  margin: 20px auto;
+  table-layout: auto;
+  background-color: aliceblue;
+}
+
+table,
+td,
+th {
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 10px;
+  border: solid 1px;
+  text-align: center;
+}
